@@ -1,0 +1,91 @@
+{% extends 'base.html' %} 
+{% block title %} 
+IndrAnna | Contact 
+{% endblock %} 
+
+{% block content %}
+
+{% if messages %}
+{% for message in messages %}
+<div style="margin-top: 3.5rem;" class="alert alert-{{ message.tags }} alert-dismissible fade show text-center" role="alert">
+  <strong>{{ message }}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
+
+<div class="container route-heading">
+  <h1 class="display-4 text-center">Contact Us</h1>
+  <hr />
+  <p style="text-align: center" class="lead">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+    perferendis nisi cumque dolorum omnis minus quaerat velit at temporibus
+    nobis?
+  </p>
+  <div class="row my-4">
+    <div class="col-md-6">
+      <h1><i class="fas fa-phone-square-alt text-center"></i></h1>
+      <p class="lead">+9779844390621</p>
+
+      <h1><i class="fas fa-envelope-open-text"></i></h1>
+      <p class="lead">indranna.technology@gmail.com</p>
+
+      <h1><i class="fas fa-map-marker-alt"></i></h1>
+      <p class="lead">Changunarayan Municipality, Bhaktapur, Nepal</p>
+      <p>Postal Code: 44804</p>
+    </div>
+    <div class="col-md-6">
+      <h4>Send Message</h4>
+      <form method="post" action="/contact">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="name"><strong>Name:</strong></label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            id="name"
+            placeholder="Enter your full name" required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email"><strong>Email Address:</strong></label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            placeholder="Enter your email address" required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="phone"><strong>Phone Number:</strong></label>
+          <input
+            type="text"
+            class="form-control"
+            name="phone"
+            id="phone"
+            placeholder="Enter your phone number" required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="msg"><strong>Message:</strong></label>
+          <textarea
+            class="form-control"
+            name="msg"
+            id="msg"
+            cols="5"
+            rows="5"
+            aria-describedby="msgHelp" required
+          ></textarea>
+          <div id="msgHelp" class="form-text">
+            Your message should not contain more than 200 characters.
+          </div>
+        </div>
+        <br />
+        <button type="submit" class="btnCustom">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

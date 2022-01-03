@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    IndrAnna | Feedback
+{% endblock %}
+
+{% block content %}
+
+{% if messages %}
+{% for message in messages %}
+<div style="margin-top: 3.5rem;" class="alert alert-{{ message.tags }} alert-dismissible fade show text-center"
+    role="alert">
+    <strong>{{ message }}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
+
+    <div class="container route-heading">
+        <img class="mx-auto d-block" style="width: 200px; height: 200px;" src="../static/site-title-1.png" alt="" srcset="">
+        <h1 class="display-4 text-center">Client Feedback Form</h1>
+        <form class="feedback-form" method="post" action="/feedback">
+            {% csrf_token %}
+            <p class="form-text"><em>Note: The fields with '<span style="color: #ff0000;">*</span>' are mandatory.</em></p>
+            <div class="mb-3">
+              <label for="name" class="form-label required">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required aria-describedby="nameHelp">
+              <div id="nameHelp" class="form-text">Please enter your full name. Name shouldn't contain numbers.</div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label required">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" required aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="services-taken" class="form-label">Services Taken</label>
+                <select id="services-taken" name="services-taken" class="form-select" aria-describedby="serviceHelp">
+                    <option>Graphic Designing</option>
+                    <option>Desktop or Laptop Repair</option>
+                    <option>Cisco Routing</option>
+                    <option>Fiber Networking</option>
+                    <option>Network Wiring</option>
+                    <option>Windows and mac solution</option>
+                    <option>Printer Setup</option>
+                    <option>Emails Retrieval</option>
+                    <option>Online Cloud Solution</option>
+                </select>
+                <div id="serviceHelp" class="form-text">Please select one of the services.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="subject" class="form-label required">Subject</label>
+                <input type="text" class="form-control" id="subject" name="subject" required aria-describedby="subjectHelp">
+                <div id="subjectHelp" class="form-text">Please enter subject.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="msg" class="form-label required">Message</label>
+                <textarea class="form-control" id="msg" name="msg" required minlength="10" maxlength="200"  aria-describedby="msgHelp"></textarea>
+                <div id="msgHelp" class="form-text">Your message should contain wordcounts between 10 and 200</div>
+            </div>
+            <button type="submit" class="btnCustom">Send Feedback</button>
+        </form>
+    </div>
+
+    
+{% endblock %}

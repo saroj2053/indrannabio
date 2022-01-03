@@ -1,0 +1,312 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    IndrAnna | Home
+{% endblock %}
+
+{% block content %}
+
+{% if messages %}
+{% for message in messages %}
+<div style="margin-top: 3.5rem; margin-bottom: 0;" class="alert alert-{{ message.tags }} alert-dismissible fade show text-center"
+  role="alert">
+  <strong>{{ message }}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+  
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../static/image6.jpg" alt="Los Angeles" class="d-block w-100">
+        <div class="carousel-caption">
+          <h1><strong>NETWORKING</strong></h1>
+          <p class="lead">Remember us for all the tasks related to networking</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../static/image3.jpg" alt="Chicago" class="d-block w-100">
+        <div class="carousel-caption">
+          <h1><strong>IndrAnna</strong></h1>
+          <p class="lead">We have the capability to solve all of your technical problem.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../static/image1.jpg" alt="New York" class="d-block w-100">
+        <div class="carousel-caption">
+          <h1 style="color: #000;"><strong>Website Development</strong> </h1>
+          <p style="color: #000;" class="lead">Hire our professionals to build an awesome website for your company.</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img class="img-thumbnail" src="../static/image2.jpg" alt="">
+            <p class="figure-caption">
+              Computer is an indispensable component in this modern world. Each individual needs a device that facilitates them to perform variety of tasks of their day to day work. Hence this requirement enhances the popularity of modern desktops and laptops.
+            </p>
+        </div>
+        <div class="col-md-4">
+          <img class="img-thumbnail" src="../static/image4.jpg" alt="">
+          <p class="figure-caption">
+            Cloud Storage has an ever-growing list of storage bucket locations where you can store your data with multiple automatic redundancy options.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img class="img-thumbnail" src="../static/web-1738168_1920.jpg" alt="">
+          <p style="text-align: justify;"class="figure-caption">
+            Web development is the work involved in developing a website for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services.
+          </p>
+        </div>
+    </div>
+    
+
+    <section id="services">
+      <h1 class="text-center display-4 my-4"> Remember Us for the following Stuffs</h1>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="text-center">
+            <h1><i class="fas fa-laptop"></i></h1>
+            <h4>DESKTOP AND LAPTOP</h4>
+          </div>
+            <ul>
+              <li>
+                Desktops, Laptops, All-In-Ones!
+              </li>
+              <li>
+                Virus Removal
+              </li>
+              <li>
+                Slow Computer
+              </li>
+              <li>
+                Wont Swich On
+              </li>
+              <li>
+                New Computer Setup
+              </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h1><img style="height: 43px; width: 60px;" src="../static/camera-cctv-security-156730.png" alt=""></h1>
+            <h4>CCTV</h4>
+          </div>
+            <ul>
+              <li>
+                New CCTV Installation
+              </li>
+              <li>
+                Fix Installed CCTV Problem
+              </li>
+              <li>
+                Fix Cabling
+              </li>
+              <li>
+                Storage Upgrade
+              </li>
+              <li>
+                Fix Online Live View Not Working
+              </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h1><i class="fas fa-database"></i></h1>
+            <h4>DATA BACKUP AND RECOVERY</h4>
+          </div>
+            <ul>
+              <li>
+                Help Setting Up An Online Backup Solution Like Dropbox So Your Precious Files And Photos Are Protected              </li>
+              <li>
+                We’ll Attempt To Recover Lost, Missing Or Accidentally Deleted Files And Photos
+              </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h1><i class="fas fa-wifi"></i></h1>
+            <h4>INTERNET OR WIFI</h4>
+          </div>
+            <ul>
+              <li>
+                New Wireless Network Setup              
+              </li>
+              <li>
+                Troubleshooting A Slow Connection
+              </li>
+              <li>
+                Troubleshooting Other Problems
+              </li>
+              <li>
+                Help Learning How To Use Websites Like Facebook
+              </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h1><i class="fas fa-photo-video"></i></h1>
+            <h4>PHOTOS</h4>
+          </div>
+            <ul>
+              <li>
+                Accessing Them Across Your Different Devices
+              <li>
+                How To Store Them Securely
+              </li>
+              <li>
+                Advice On Sharing Them With Friends & Family
+              </li>
+              <li>
+                How To Upload Them To Social Media Like Facebook And Instagram
+              </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h1><i class="fas fa-envelope"></i></h1>
+            <h4>EMAIL</h4>
+          </div>
+            <ul>
+              <li>
+                Email Setup & Training              
+              </li>
+              <li>
+                Accessing Your Emails On A Mobile Or Tablet
+              </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h1><i class="fas fa-print"></i></h1>
+            <h4>PRINTER</h4>
+          </div>
+            <ul>
+              <li>
+                Printer Setup              
+              </li>
+              <li>
+                Printing from Smartphones & Tablets
+              </li>
+              <li>
+                Troubleshooting
+              </li>
+              <li>
+                Printer Sharing with Other Computer
+              </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h1><i class="fas fa-fingerprint"></i></h1>
+            <h4>PRIVACY</h4>
+          </div>
+            <ul>
+              <li>
+                Learn How To Protect Your Identity Online              
+              </li>
+              <li>
+                Change Your Facebook Privacy Settings
+              </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="text-center">
+            <h1><i class="fas fa-network-wired"></i></h1>
+            <h4>NETWORKING</h4>
+          </div>
+            <ul>
+              <li>
+                File Sharing Among Computer              
+              </li>
+              <li>
+                Cabling For All Devices
+              </li>
+              <li>
+                RJ45 Connector Replace
+              </li>
+            </ul>
+        </div>
+      <div class="col-md-3">
+        <div class="text-center">
+          <h1><i class="fas fa-globe"></i></h1>
+          <h4>Web Design</h4>
+        </div>
+          <ul>
+            <li>
+              Design process relating to the front-end            
+            </li>
+            <li>
+              Create beautiful, engaging HTML5 content
+            </li>
+            <li>
+              Use of animation and interactive elements
+            </li>
+          </ul>
+      </div>
+    </div>
+    </section>
+
+    <br>
+
+    <h1 class="text-center my-2 display-4">Book Us Now</h1>
+    <form action="/" method="post">
+      {% csrf_token %}
+        <div class="row">
+          <p class="form-text"><em>Note: All fields with '<span style="color: #ff0000;">*</span>' are mandatory.</em></p>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="name" class="form-label required">Name:</label>
+                    <input type="text" class="form-control" name="name" id="name" required aria-describedby="nameHelp">
+                    <div id="nameHelp" class="form-text">Your name here.</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="phone" class="form-label required">Phone Number:</label>
+                    <input type="text" class="form-control" name="phone" id="phone" required aria-describedby="phoneHelp">
+                    <div id="phoneHelp" class="form-text">Your phone number here.</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="email" class="form-label required">Email Address:</label>
+                    <input type="email" class="form-control" name="email" id="email" required aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Your email address here.</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group my-3">
+            <label for="problem-msg" class="form-label required">Specify Your Problem:</label>
+            <textarea class="form-control" name="problem-msg" id="problem-msg" required minlength="20" maxlength="100" aria-describedby="msgHelp"></textarea>
+            <div id="msgHelp" class="form-text">Please Specify your problem here..</div>
+        </div>
+
+        <button type='submit' class="btnCustom" name="submitBooking">Book Now </button>
+    </form>
+</div>  
+{% endblock %}
+
+
+
