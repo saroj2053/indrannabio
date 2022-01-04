@@ -1,0 +1,1 @@
+web: gunicorn indrannabio.wsgi
