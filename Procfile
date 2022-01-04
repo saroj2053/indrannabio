@@ -1,1 +1,1 @@
-web: gunicorn indrannabio.wsgi --log-file
+web: gunicorn indrannabio.wsgi
