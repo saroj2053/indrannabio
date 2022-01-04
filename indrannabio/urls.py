@@ -29,11 +29,9 @@ admin.site.index_title = "Welcome to IndrAnna Portal"
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    url(r'^media/(?P<path>.*)$', serve,
-        {'document_root': settings.MEDIA_ROOT}),
     url(r'^static/(?P<path>.*)$', serve,
         {'document_root': settings.STATIC_ROOT})
 
 ]
 urlpatterns = urlpatterns + \
-    static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
