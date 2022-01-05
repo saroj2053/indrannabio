@@ -100,8 +100,8 @@ img#about-image {
   text-align: center;
   background-color: #000;
   position: relative;
-  margin-top: -44px; /* negative value of footer height */
-  height: 94px;
+  margin-top: -42px;
+  height: 150px;
   clear: both;
-  padding-top: 20px;
+  padding-top: 30px;
 }
